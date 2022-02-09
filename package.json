@@ -1,0 +1,29 @@
+{
+  "name": "agencianode",
+  "version": "1.0.0",
+  "description": "first node proyect",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-Andy9/agencianode.git"
+  },
+  "type": "module",
+  "author": "Andre Zapata",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i-Andy9/agencianode/issues"
+  },
+  "homepage": "https://github.com/i-Andy9/agencianode#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mysql2": "^2.3.3",
+    "pug": "^3.0.2",
+    "sequelize": "^6.16.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
