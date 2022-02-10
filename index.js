@@ -1,7 +1,7 @@
 //archivo para configurar express 
 import express from 'express';
-import router from './Routes/index.js'
-import db from './Config/db.js'
+import router from './Routes/index_routes.js'
+import db from './Config/dbConfig.js'
 
 const app = express();
 
@@ -26,6 +26,9 @@ app.use((req,res,next)=>{
      
     next();
 })
+
+//agregar el body parser para leer los datos del formulario
+app.use(express.urlencoded({extended:true}));
 
 //definir la carpeta publica 
 app.use(express.static('public'))

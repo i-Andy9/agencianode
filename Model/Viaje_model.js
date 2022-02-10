@@ -1,5 +1,5 @@
 import Sequelize from 'sequelize';
-import db from '../Config/db.js';
+import db from '../Config/dbConfig.js';
 
 export const Viaje =db.define('viajes', {
     titulo:{

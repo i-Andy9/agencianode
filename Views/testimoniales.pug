@@ -2,5 +2,26 @@ extends ./layout/index
 
 block contenido
     main.container.mt-5 
+        h1.text-center.mt-5 #{pagina}
         .row 
-            h1= pagina
+            .col-md-12 
+                h2.d-block.w-100.text-center Agrega Testimonial
+    
+                if(errores)
+                    each error in errores 
+                        .alert.col.alert-danger.text-center= error.msg
+
+            .row.justify-content-center.col     
+                .col-md-8 
+                    form(action="/testimoniales" method="post")
+                        .form-group 
+                            label(for="name") Nombre
+                            input#name(type="text", placeholder="Tu nombre", name="name", class="form-control",value=name)
+                        .form-group 
+                            label(for="mail") Correo Electronico
+                            input#mail(type="text", placeholder="Tu Correo", name="mail", class="form-control",value=mail)
+                        .form-group 
+                            label(for="msg") Mensaje
+                            textarea#msg(type="text", placeholder="Tu Mensaje", name="msg", class="form-control", rows=3)= msg
+                        
+                        input.btn.btn-success.btn-block(type="submit" ) 

@@ -1,4 +1,4 @@
-import { Viaje } from "../Model/Viaje.js";
+import { Viaje } from "../Model/Viaje_model.js";
 
 
 const paginaInicio = (req,res) =>{
