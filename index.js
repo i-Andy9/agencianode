@@ -12,6 +12,7 @@ db.authenticate()
 
 //definir el puerto
 const port = process.env.PORT || 4000; //porcess.env.PORT variable de entorno
+const host = process.env.PORT || '0.0.0.0'; //porcess.env.PORT variable de entorno
  
 //habilitar pug 
 app.set('view engine', 'pug')
