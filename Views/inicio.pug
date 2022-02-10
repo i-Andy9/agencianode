@@ -1,7 +1,32 @@
 extends ./layout/index
 
+block slider
+    .slider     
+        h1 Rio de jaineiro 
+        em aventura
+
 block contenido
 
     main.container.mt-5 
-        .row 
-            h1= pagina
+        h2.text.center.mb-5 Sobre Nosotros
+        .row.mb-5 
+            .col-md-6
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper nisl mauris, gravida dignissim nibh suscipit eget. Fusce sodales fermentum leo, ut faucibus mi tincidunt efficitur. Nullam viverra mi vel sapien rhoncus cursus. 
+                p Ut at diam fermentum, mollis justo at, bibendum sapien. Maecenas at est purus. In auctor viverra ullamcorper. Etiam tempor purus leo, id venenatis velit auctor nec. 
+            .col-md-6 
+                img(src="img/inicio_nosotros.jpg", alt="img nosotros", class="img-fluid")
+        .row.mt-5
+            include ./layout/bloque_viajes
+
+    .descuento 
+        .container 
+            .row 
+                .col-md-6 
+                    .contenido 
+                        h3 5% de Descuento 
+                        p.titulo Viaje a Canada 
+                        p.fecha 20 de Marze de 2022
+                        p.precio $2,500 USD
+
+    .container.mt-5 
+        include ./layout/bloque_testimoniales
